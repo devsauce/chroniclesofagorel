@@ -14,13 +14,13 @@ def l2b(lfile, mainc):
 def startgame(mainc):
     mainc.name = raw_input("What will your name be? ")
     c = 0
-    while(c>0 and c<4):
-        c = raw_input("Warrior[1], Mage[2], or Rogue[3]? ")
-    if(c==1):
+    while (not(c>0 and c<4)):
+        c = int(raw_input("Warrior[1], Mage[2], or Rogue[3]? "))
+    if (c==1):
         mainc.strn = 5
         mainc.defn = 3
         mainc.mhp = 20
-    elif(c==2):
+    elif (c==2):
         mainc.strn = 3
         mainc.defn = 3
         mainc.mhp = 40
