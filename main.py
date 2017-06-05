@@ -15,7 +15,10 @@ def startgame(mainc):
     mainc.name = raw_input("What will your name be? ")
     c = 0
     while (not(c>0 and c<4)):
-        c = int(raw_input("Warrior[1], Mage[2], or Rogue[3]? "))
+        try:
+            c = int(raw_input("Warrior[1], Mage[2], or Rogue[3]? "))
+        except:
+            c = 0
     if (c==1):
         mainc.strn = 5
         mainc.defn = 3
